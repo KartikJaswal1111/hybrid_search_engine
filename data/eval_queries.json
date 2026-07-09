@@ -1,0 +1,17 @@
+[
+  {"query": "What does card FUT-23-091 belong to?", "expected_id": 1, "favors": "sparse"},
+  {"query": "Tell me about transfer code TRX-2024-077", "expected_id": 8, "favors": "sparse"},
+  {"query": "What happened with VAR-DISALLOWED-12?", "expected_id": 9, "favors": "sparse"},
+  {"query": "Details on injury code INJ-HAM-09", "expected_id": 10, "favors": "sparse"},
+  {"query": "What's logged under code RC-MATCH-45?", "expected_id": 18, "favors": "sparse"},
+  {"query": "Need a deadly poacher who never misses in the box", "expected_id": 1, "favors": "dense"},
+  {"query": "Looking for a holding midfielder who breaks up play", "expected_id": 3, "favors": "dense"},
+  {"query": "Who orchestrates the attack with great vision from deep midfield?", "expected_id": 7, "favors": "dense"},
+  {"query": "Want a fullback who bombs forward and whips in crosses", "expected_id": 6, "favors": "dense"},
+  {"query": "Need an indestructible engine who never stops running in midfield", "expected_id": 12, "favors": "dense"},
+  {"query": "Who's the best penalty taker under pressure?", "expected_id": 11, "favors": "either"},
+  {"query": "Tell me about the captain's leadership experience", "expected_id": 16, "favors": "either"},
+  {"query": "Which player scored a hat-trick recently?", "expected_id": 19, "favors": "either"},
+  {"query": "Who just joined on loan this season?", "expected_id": 17, "favors": "either"},
+  {"query": "Need an aerial dominant leader at center back", "expected_id": 4, "favors": "either"}
+]

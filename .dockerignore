@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+LINKEDIN_POST.md
+LINKEDIN_POST_DRAFTS.md
