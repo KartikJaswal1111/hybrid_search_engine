@@ -1,6 +1,6 @@
 # Hybrid Search Engine — Scouting the Pitch with TF-IDF vs. Embeddings vs. Hybrid Fusion
 
-A production-minded retrieval engine, themed as a soccer scouting database, comparing three search strategies on the same 20 scouting and match reports — measured on a labeled eval set, containerised with Docker, and served through a Google-style interactive UI.
+A production-minded retrieval engine, themed as a soccer scouting database, comparing three search strategies on the same 20 scouting and match reports — measured on a labeled eval set, containerised with Docker, and served through an interactive UI.
 
 - **Sparse** — TF-IDF + cosine similarity (exact token/lexical overlap)
 - **Dense** — `sentence-transformers/all-MiniLM-L6-v2` embeddings + cosine similarity (semantic similarity)
@@ -111,7 +111,7 @@ scout query
 
 ## Streamlit UI
 
-A Google-style interactive dashboard that makes the comparison visual:
+An interactive dashboard that makes the comparison visual:
 
 - Three-column layout: Keyword (Blue) · Semantic (Red) · Hybrid (Green)
 - Animated score bars per result card
@@ -150,7 +150,7 @@ docker compose down         # stop
 
 ## Docker Image Optimisation
 
-The default `pip install torch` pulls every CUDA/GPU library regardless of whether the machine has a GPU — PyPI ships the "works everywhere" variant by default. This app runs entirely on CPU (TF-IDF is pure matrix math, MiniLM on 20 docs takes milliseconds without a GPU), so those libraries are dead weight.
+The default `pip install torch` pulls every CUDA/GPU library regardless of whether the machine has a GPU — PyPI ships the "works everywhere" variant by default. This app runs entirely on CPU (TF-IDF is pure matrix math, MiniLM on 20 docs takes milliseconds without a GPU).
 
 ```dockerfile
 # Install CPU-only torch before requirements.txt so pip never pulls CUDA
@@ -190,7 +190,7 @@ RUN pip install torch --index-url https://download.pytorch.org/whl/cpu
 | `dense.py` | Sentence-embedding retriever |
 | `hybrid.py` | Weighted-average and RRF fusion |
 | `evaluate.py` | Runs all three methods, prints hit@1/hit@3 comparison table |
-| `streamlit_app.py` | Interactive Google-style scout dashboard |
+| `streamlit_app.py` | Interactive scout dashboard |
 | `Dockerfile` | CPU-only optimised image with healthcheck |
 | `docker-compose.yml` | Single-command start/stop with port mapping and restart policy |
-| `.streamlit/config.toml` | Light theme, Google brand colours |
+| `.streamlit/config.toml` | Light theme |
