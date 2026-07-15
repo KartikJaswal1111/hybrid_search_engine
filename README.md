@@ -1,10 +1,10 @@
-# Hybrid Search Engine — Scouting the Pitch with TF-IDF vs. Embeddings vs. Hybrid Fusion
+# Hybrid Search Engine: Scouting the Pitch with TF-IDF vs. Embeddings vs. Hybrid Fusion
 
 A production-minded retrieval engine, themed as a soccer scouting database, comparing three search strategies on the same 20 scouting and match reports — measured on a labeled eval set, containerised with Docker, and served through an interactive UI.
 
 - **Sparse** — TF-IDF + cosine similarity (exact token/lexical overlap)
 - **Dense** — `sentence-transformers/all-MiniLM-L6-v2` embeddings + cosine similarity (semantic similarity)
-- **Hybrid** — weighted fusion: `score = alpha * dense + (1 - alpha) * sparse`, tuned via eval sweep
+- **Hybrid** — weighted fusion: `score = alpha * dense + (1 - alpha) * sparse`, tuned via eval sweep.
 
 ---
 
