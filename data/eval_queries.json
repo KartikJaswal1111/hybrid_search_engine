@@ -4,7 +4,7 @@
   {"query": "What happened with VAR-DISALLOWED-12?", "expected_id": 9, "favors": "sparse"},
   {"query": "Details on injury code INJ-HAM-09", "expected_id": 10, "favors": "sparse"},
   {"query": "What's logged under code RC-MATCH-45?", "expected_id": 18, "favors": "sparse"},
-  {"query": "Need a deadly poacher who never misses in the box", "expected_id": 1, "favors": "dense"},
+  {"query": "Need a poacher who never misses in the box", "expected_id": 1, "favors": "dense"},
   {"query": "Looking for a holding midfielder who breaks up play", "expected_id": 3, "favors": "dense"},
   {"query": "Who orchestrates the attack with great vision from deep midfield?", "expected_id": 7, "favors": "dense"},
   {"query": "Want a fullback who bombs forward and whips in crosses", "expected_id": 6, "favors": "dense"},

@@ -24,6 +24,6 @@ class DenseRetriever:
 if __name__ == "__main__":
     docs = load_documents()
     retriever = DenseRetriever(docs)
-    query = "Need a deadly poacher who never misses in the box"
+    query = "Need a poacher who never misses in the box"
     for doc, score in retriever.search(query, top_k=3):
         print(f"[{score:.3f}] id={doc['id']}  {doc['text']}")

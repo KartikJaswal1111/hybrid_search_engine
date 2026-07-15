@@ -150,7 +150,7 @@ def main():
     eval_queries = get_eval_queries()
 
     if "query" not in st.session_state:
-        st.session_state.query = "Need a deadly poacher who never misses in the box"
+        st.session_state.query = "Need a poacher who never misses in the box"
 
     # ── Sidebar ──
     with st.sidebar:
@@ -161,7 +161,7 @@ def main():
         st.markdown("**Try a preset query**")
         presets = [
             "What does card FUT-23-091 belong to?",
-            "Need a deadly poacher who never misses in the box",
+            "Need a poacher who never misses in the box",
             "Looking for a holding midfielder who breaks up play",
             "Want a fullback who bombs forward and whips in crosses",
             "Who's the best penalty taker under pressure?",

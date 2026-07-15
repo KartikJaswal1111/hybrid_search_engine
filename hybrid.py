@@ -65,7 +65,7 @@ if __name__ == "__main__":
 
     for query in [
         "What does card FUT-23-091 belong to?",
-        "Need a deadly poacher who never misses in the box",
+        "Need a poacher who never misses in the box",
     ]:
         print(f"\nQuery: {query}")
         for doc, score in retriever.search_weighted(query, top_k=3):
