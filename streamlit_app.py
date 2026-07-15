@@ -177,11 +177,7 @@ def main():
     # ── Hero ──
     html("""
         <div style="text-align:center;padding:2.5rem 1rem 1rem">
-        <h1 style="font-size:2.8rem;font-weight:700;letter-spacing:-1px;margin:0">
-        <span style="color:#4285F4">S</span><span style="color:#EA4335">c</span>
-        <span style="color:#FBBC05">o</span><span style="color:#4285F4">u</span>
-        <span style="color:#34A853">t</span>&nbsp;Search
-        </h1>
+        <h1 style="font-size:2.8rem;font-weight:700;letter-spacing:-1px;margin:0"><span style="color:#4285F4">S</span><span style="color:#EA4335">c</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">u</span><span style="color:#34A853">t</span>&nbsp;Search</h1>
         <p style="color:#5F6368;font-size:1rem;margin:0.5rem 0 0">
         Keyword &nbsp;·&nbsp; Semantic &nbsp;·&nbsp; Hybrid — three ways to find the right player report
         </p>
