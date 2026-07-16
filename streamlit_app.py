@@ -27,8 +27,8 @@ section[data-testid="stSidebar"] { background:#F8F9FA; border-right:1px solid #E
 div[data-testid="stTextInput"] input {
     border-radius:24px !important;
     border:1px solid #DFE1E5 !important;
-    padding:0.75rem 1.2rem !important;
-    font-size:1rem !important;
+    padding:1rem 1.6rem !important;
+    font-size:1.1rem !important;
     box-shadow:0 1px 6px rgba(32,33,36,0.1) !important;
 }
 div[data-testid="stTextInput"] input:focus {
@@ -89,16 +89,15 @@ def card(rank, doc, score, accent, query, highlight, recovered=False):
         overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(32,33,36,0.08)">
         <div style="height:4px;background:{accent};width:100%"></div>
         <div style="padding:12px 14px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        {badge}
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;margin-top:{('8px' if recovered else '0')}">
         <span style="font-size:0.72rem;font-weight:600;background:{rank_bg};color:{rank_col};
         border-radius:20px;padding:2px 10px">#{rank} · Report {doc['id']}</span>
-        <span style="font-size:0.82rem;font-weight:700;color:#5F6368">{pct:.0f}%</span>
         </div>
         <div style="height:4px;background:#F1F3F4;border-radius:2px;margin-bottom:10px;overflow:hidden">
         <div style="height:100%;width:{pct:.0f}%;background:{accent};border-radius:2px"></div>
         </div>
         <div style="font-size:0.87rem;color:#3C4043;line-height:1.6">{text}</div>
-        {badge}
         </div>
         </div>
     """)
@@ -179,13 +178,13 @@ def main():
         <div style="text-align:center;padding:2.5rem 1rem 1rem">
         <h1 style="font-size:2.8rem;font-weight:700;letter-spacing:-1px;margin:0"><span style="color:#4285F4">S</span><span style="color:#EA4335">c</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">u</span><span style="color:#34A853">t</span>&nbsp;Search</h1>
         <p style="color:#5F6368;font-size:1rem;margin:0.5rem 0 0">
-        Keyword &nbsp;·&nbsp; Semantic &nbsp;·&nbsp; Hybrid — three ways to find the right player report
+        Keyword &nbsp;·&nbsp; Semantic &nbsp;·&nbsp; Hybrid:  three ways to find the right player report
         </p>
         </div>
     """)
 
     # ── Search input ──
-    _, center, _ = st.columns([1, 2, 1])
+    _, center, _ = st.columns([0.5, 3, 0.5])
     with center:
         query = st.text_input(
             "Scout query",
@@ -227,7 +226,7 @@ def main():
              'margin-bottom:10px">Hybrid Fusion</div>')
         for rank, (doc, score) in enumerate(hybrid_r, 1):
             recovered = doc["id"] not in sparse_ids and doc["id"] not in dense_ids
-            card(rank, doc, score, "#34A853", query, highlight=True, recovered=recovered)
+            card(rank, doc, score, "#34A853", query, highlight=False, recovered=recovered)
 
     # ── Scoreboard ──
     html('<hr style="border:none;border-top:1px solid #E8EAED;margin:1.5rem 0 1rem">')

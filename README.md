@@ -174,7 +174,7 @@ RUN pip install torch --index-url https://download.pytorch.org/whl/cpu
 | Dense retrieval | sentence-transformers MiniLM-L6-v2 |
 | Fusion | Weighted average + RRF (hybrid.py) |
 | Evaluation | Custom hit@1 / hit@3 harness (evaluate.py) |
-| UI | Streamlit (Google-style custom CSS) |
+| UI | Streamlit (custom CSS — clean search-style UI) |
 | Containerisation | Docker + Docker Compose |
 | Base image | python:3.11-slim (CPU-only) |
 
